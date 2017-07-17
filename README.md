@@ -14,7 +14,7 @@ _App returns cost of pizza_
 
 |  Behavior: 	                          |  Input Example: 	|   Output Example:	|
 |-------------------------------------	|-----------------	|-----------------	|
-|  user chooses pizza toppings          |    pepperoni      | pepperoni pizza - $10	|   	
+|  user chooses pizza toppings          |    pepperoni; 8"     | Your total is: $10	|   	
 
 ## View on GitHub Pages
 
