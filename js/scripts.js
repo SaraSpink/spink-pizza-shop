@@ -1,6 +1,6 @@
 //Business Logic
 
-function pizzaOrder(toppings, size) {
+function pizzaOrder(size, toppings) {
   this.size = size;
   this.toppings = toppings;
 }
@@ -23,8 +23,14 @@ pizzaOrder.prototype.price = function() {
 $(document).ready(function() {
   $("form#pizzaSelections").submit(function(event){
     event.preventDefault();
+    var size = $("#pizzaSize").val();
+    var toppings = $("#pizzaSelections input:checked");
+    var toppingsCount = parseInt(toppings.length);
+    var userOrder = new pizzaOrder (size, toppings);
+    var price = userOrder.price();
 
-    $("input:checkbox[name=toppings]:checked").each(function() {
-     toppingsSelected += 1;
-     var numberOfToppings = $(this).val();
-});
+    $("#yourPrice").append("$" + price);
+    $("#pizzaResult").show();
+    console.log(userOrder);
+    });
+  });
