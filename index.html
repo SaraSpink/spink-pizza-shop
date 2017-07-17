@@ -11,32 +11,46 @@
 
 <body>
   <div class="container">
-    <h1>Zza Lord's Pizza Parlor</h1>
-    <form id="pizzaSelections">
-      <div class="form-group">
-        <h3>Choose your favorite toppings:</h3>
-          <input type="checkbox" name="toppings" value="extraCheese">  Extra Cheese</br>
-          <input type="checkbox" name="toppings" value="pepperoni">  Pepperoni</br>
-          <input type="checkbox" name="toppings" value="canadianBacon">  Canadian Bacon</br>
-          <input type="checkbox" name="toppings" value="pineapple">  Pineapple</br>
-          <input type="checkbox" name="toppings" value="greenPepper">  Green Peppers</br>
-          <input type="checkbox" name="toppings" value="mushroom">  Mushrooms</br>
+    <div class="row">
+      <div class="col-md-6 panel">
+        <h1>Za-Lord's Pizza Parlor</h1>
+        <form id="pizzaSelections">
+          <div class="form-group">
+            <h3>Choose your favorite toppings:</h3>
+            <input type="checkbox" name="toppings" value="extraCheese"> Extra Cheese</br>
+            <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</br>
+            <input type="checkbox" name="toppings" value="canadianBacon"> Canadian Bacon</br>
+            <input type="checkbox" name="toppings" value="pineapple"> Pineapple</br>
+            <input type="checkbox" name="toppings" value="greenPepper"> Green Peppers</br>
+            <input type="checkbox" name="toppings" value="mushroom"> Mushrooms</br>
+
+
+            <h3>Select size:</h3>
+            <select class="form-control" id="beverage">
+          <option value="8">Personal - 8" - $10.00</option>
+          <option value="10">Regular - 10" - $12.00</option>
+          <option value="12">Large - 12" $14.00</option>
+          <option value="16">Family Size - 16" - $16.00</option>
+          </select>
+            <br>
+            <p>All pizzas include one free topping choice. Additional toppings $1 each!</p>
+
+            <div class="buttPad">
+              <button type="submit" class="btn btn-info" id="placeOrder">Submit your order!</button>
+            </div>
+
+          </div>
+        </form>
+        <div id="pizzaResult">
+          <p id="yourPizza"><b>Thank you for your order!</b></p>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="img/za.jpg"/>
       </div>
 
-      <h3>Select size:</h3>
-        <select class="form-control" id="beverage">
-          <option value="8">Personal - 8"</option>
-          <option value="10">Regular - 10"</option>
-          <option value="12">Large - 12"</option>
-          <option value="16">Family Size - 16"</option>
-        </select>
-
-      <div class="buttPad">
-      <button type="submit" class="btn btn-success">Submit your order!</button>
-      </div>
-
-    </form>
-  </div>
+    </div>
 </body>
 
 </html>

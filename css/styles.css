@@ -1,3 +1,16 @@
 .buttPad {
   padding-top: 50px;
 }
+
+img {
+   width: 80%;
+}
+
+.panel {
+  background-color: #d6e5ff
+}
+
+.container {
+  padding: inherit;
+  padding: 100px;
+}

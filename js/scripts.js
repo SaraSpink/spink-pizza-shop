@@ -1,24 +1,32 @@
+//Business Logic
+
+function pizzaOrder(toppings, size) {
+  this.toppings = toppings;
+  this.size = size;
+}
+
+pizzaOrder.prototype.toppings = function() {
+  $(function())
+}
 
 
 
-
+//User Interface Logic
 $(document).ready(function(){
   $("form#pizzaSelections").submit(function(event){
     event.preventDefault();
-    $("#warning-responses").show();
-    // var userResponses = [];
-    var warningSignsCounter = 0;
-    $("input:checkbox[name=warning-signs]:checked").each(function(){
-      warningSignsCounter += 1;
-      if (warningSignsCounter === 3) {
-        return $('#warning-responses').append("you seem stressed. Call doctor feelgood!");
+    $("#pizzaResult").show();
+
+    var toppingsCounter = 0
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      toppingsCounter += 1;
+      if (toppingsCounter !== 3) {
+        return $('#pizzaResult').append("Congratulations you won a free pizza");
       } else {
-        return $('#warning-responses').append("you are feeling fine!");
+        return $('#pizzaResult').append("3 toppings, your pizza is 10USD");
       }
-      // var warningSigns = $(this).val();
-      // $('#warning-responses').append(warningSigns + "<br>");
-        // userResponses.push(workTransportationMode);
     });
+
     $("#health-responses").show();
     $("input:checkbox[name=health-symptons]:checked").each(function(){
       var healthSymptoms = $(this).val();
@@ -40,7 +48,7 @@ $(document).ready(function(){
     //   var funTransportationMode = $(this).val();
     //   userResponses.push(funTransportationMode);
     // });
-    console.log(userResponses);
-    $('#stress-survey').hide();
+    console.log(toppingsCounter);
+    $('#pizzaSelections').hide();
   });
 });
