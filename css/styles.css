@@ -7,10 +7,14 @@ img {
 }
 
 .panel {
-  background-color: #d6e5ff
+  background-color: #eec9ff
 }
 
 .container {
   padding: inherit;
   padding: 100px;
+}
+
+#pizzaResult {
+  display: none;
 }
